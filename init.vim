@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/nvim-compe'
 " Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -44,6 +45,7 @@ vnoremap df <Esc>
 nnoremap <leader>s :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>c :q!<cr>
+nnoremap <leader>w <C-w>
 
 " Telescope remaps
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
