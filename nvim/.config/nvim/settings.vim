@@ -1,5 +1,3 @@
-colorscheme gruvbox
-set background=dark
 set path+=**
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -14,7 +12,6 @@ set noerrorbells
 set nowrap
 set incsearch
 set termguicolors
-"set scrolloff=8
 set signcolumn=yes
 set colorcolumn=80
 set completeopt=menuone,noinsert,noselect

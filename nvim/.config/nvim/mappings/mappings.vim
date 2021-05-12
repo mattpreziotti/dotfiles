@@ -4,23 +4,30 @@ inoremap fd <Esc>
 inoremap df <Esc>
 vnoremap fd <Esc>
 vnoremap df <Esc>
-nnoremap <leader>s :w<cr>
-nnoremap <leader>q :q<cr>
-nnoremap <leader>c :q!<cr>
-nnoremap <leader>w <C-w>
+
+" File Modifiers 
+nnoremap <M-s> :w<cr>
+nnoremap <M-S> :wq<cr>
+nnoremap <C-q> :q<cr>
+"nnoremap <C-Q> :q!<cr>
+nnoremap <C-d> :bd<cr>
+"nnoremap <M-Q> :bd!<cr>
+
+" Easier command mode
 nnoremap ; :
 vnoremap ; :
 nnoremap : ;
 vnoremap : ;
+
+" Buffer remaps
+nnoremap <Tab> :bn<cr>
+nnoremap <S-Tab> :bp<cr>
 
 " Navigation remaps
 nnoremap <expr> <S-J> getcurpos()[1] == line("w$") ? "\<PageDown>" : "L"
 nnoremap <expr> <S-K> getcurpos()[1] == line("w0") ? "\<PageUp>" : "H"
 nnoremap <S-H> 0
 nnoremap <S-L> $
-
-nnoremap <A-l> :bn<cr>
-nnoremap <A-h> :bp<cr>
 
 " Window movement shortcuts
 " move to the window in the direction shown, or create a new window
