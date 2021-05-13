@@ -4,14 +4,13 @@ inoremap fd <Esc>
 inoremap df <Esc>
 vnoremap fd <Esc>
 vnoremap df <Esc>
+nnoremap <leader>. :Startify<cr>
 
 " File Modifiers 
-nnoremap <M-s> :w<cr>
-nnoremap <M-S> :wq<cr>
-nnoremap <C-q> :q<cr>
-"nnoremap <C-Q> :q!<cr>
-nnoremap <C-d> :bd<cr>
-"nnoremap <M-Q> :bd!<cr>
+nnoremap <leader>s :w<cr>
+nnoremap <leader>S :wq<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>Q :q!<cr>
 
 " Easier command mode
 nnoremap ; :
@@ -22,6 +21,8 @@ vnoremap : ;
 " Buffer remaps
 nnoremap <Tab> :bn<cr>
 nnoremap <S-Tab> :bp<cr>
+nnoremap <leader>w :bd<cr>
+nnoremap <leader>W :bd!<cr>
 
 " Navigation remaps
 nnoremap <expr> <S-J> getcurpos()[1] == line("w$") ? "\<PageDown>" : "L"

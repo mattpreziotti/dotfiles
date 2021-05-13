@@ -1,6 +1,4 @@
 call plug#begin('~/.vim/plugged')
-" Themes
-Plug 'joshdick/onedark.vim'
 " IntelliSense
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
@@ -15,6 +13,8 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " Status Line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Themes
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " Set the theme
@@ -25,3 +25,4 @@ source $HOME/.config/nvim/plugins/lspconfig.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/compe.vim
 source $HOME/.config/nvim/plugins/airline.vim
+source $HOME/.config/nvim/plugins/startify.vim
