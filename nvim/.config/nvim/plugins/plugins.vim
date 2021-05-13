@@ -25,4 +25,4 @@ source $HOME/.config/nvim/plugins/lspconfig.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/compe.vim
 source $HOME/.config/nvim/plugins/airline.vim
-source $HOME/.config/nvim/plugins/startify.vim
+source $HOME/.config/nvim/plugins/start-screen.vim
