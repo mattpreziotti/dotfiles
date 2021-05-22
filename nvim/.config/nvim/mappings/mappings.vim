@@ -24,6 +24,20 @@ nnoremap <S-Tab> :bp<cr>
 nnoremap <leader>w :bd<cr>
 nnoremap <leader>W :bd!<cr>
 
+" Quixfix remaps
+function! CleverTab()
+   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+      return "\<Tab>"
+   else
+      return "\<C-N>"
+   endif
+endfunction
+inoremap <Tab> <C-R>=CleverTab()<CR>
+nnoremap <leader>j :cn<CR>
+nnoremap <leader>k :cp<CR>
+inoremap <leader>j :cn<CR>
+inoremap <leader>k :cp<CR>
+
 " Navigation remaps
 nnoremap <expr> <S-J> getcurpos()[1] == line("w$") ? "\<PageDown>" : "L"
 nnoremap <expr> <S-K> getcurpos()[1] == line("w0") ? "\<PageUp>" : "H"
