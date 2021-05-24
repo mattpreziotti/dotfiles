@@ -7,10 +7,9 @@ vnoremap df <Esc>
 nnoremap <leader>. :Startify<cr>
 
 " File Modifiers 
-nnoremap <leader>s :w<cr>
-nnoremap <leader>S :wq<cr>
-nnoremap <leader>q :q<cr>
-nnoremap <leader>Q :q!<cr>
+nnoremap <C-S> :w<cr>
+nnoremap <C-Q> :q<cr>
+nnoremap <C-W> :bd<cr>
 
 " Easier command mode
 nnoremap ; :
@@ -21,8 +20,6 @@ vnoremap : ;
 " Buffer remaps
 nnoremap <Tab> :bn<cr>
 nnoremap <S-Tab> :bp<cr>
-nnoremap <leader>w :bd<cr>
-nnoremap <leader>W :bd!<cr>
 
 " Quixfix remaps
 function! CleverTab()
