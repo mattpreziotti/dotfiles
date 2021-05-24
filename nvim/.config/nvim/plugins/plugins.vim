@@ -3,6 +3,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
+" Git
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
 " Startify
 Plug 'mhinz/vim-startify'
 " Telescope
@@ -43,8 +48,9 @@ EOF
 
 " Plugin specific settings
 source $HOME/.config/nvim/plugins/lspconfig.vim
-source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/compe.vim
-source $HOME/.config/nvim/plugins/airline.vim
+source $HOME/.config/nvim/plugins/signify.vim
 source $HOME/.config/nvim/plugins/start-screen.vim
+source $HOME/.config/nvim/plugins/telescope.vim
+source $HOME/.config/nvim/plugins/airline.vim
 source $HOME/.config/nvim/plugins/which-key.vim
