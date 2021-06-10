@@ -22,24 +22,22 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
+let g:which_key_map['.'] = [ ':Startify' , 'startify' ]
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
+let g:which_key_map['%'] = [ ':so %' , 'source file' ]
+let g:which_key_map['a'] = [ ':G add %' , 'git add current file' ]
+let g:which_key_map['d'] = [':SignifyHunkDiff', 'inline diff']
+let g:which_key_map['D'] = [':SignifyHunkUndo', 'undo hunk']
+let g:which_key_map['n'] = [ ':NERDTreeToggle' , 'nerd tree' ]
+let g:which_key_map['q'] = [ ':q!' , 'quit' ]
 let g:which_key_map['s'] = [ ':w' , 'save' ]
 let g:which_key_map['S'] = [ ':wq' , 'save & quit' ]
 let g:which_key_map['w'] = [ ':bd' , 'close buffer' ]
-let g:which_key_map['q'] = [ ':q!' , 'close buffer' ]
-let g:which_key_map['%'] = [ ':so %' , 'source file' ]
-let g:which_key_map['a'] = [ ':G add %' , 'git add current file' ]
-let g:which_key_map['c'] = [ ':cclose' , 'close list' ]
-let g:which_key_map['C'] = [ ':lclose' , 'close local list' ]
-let g:which_key_map['o'] = [ ':copen' , 'open list' ]
-let g:which_key_map['O'] = [ ':lopen' , 'open local list' ]
-let g:which_key_map['n'] = [ ':NERDTreeToggle' , 'nerd tree' ]
-let g:which_key_map['.'] = [ ':Startify' , 'startify' ]
 
 " l is for lsp
 let g:which_key_map.l = {
       \ 'name' : '+lsp' ,
-      \ 'k' : [':lua vim.lsp.buf.formatting()', 'format file'],
+      \ 'k' : ['vim#lsp#buf#formatting()', 'format file'],
       \ }
 
 " f is for find
@@ -53,15 +51,21 @@ let g:which_key_map.f = {
 " g is for git
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
-      \ 's' : [':vertical G', 'status'],
-      \ 'c' : [':G commit', 'commit'],
       \ 'a' : [':G add %', 'add current file'],
       \ 'A' : [':G add .', 'add all'],
+      \ 'b' : [':Telescope git_branches', 'branches'],
+      \ 'B' : [':G blame', 'blame'],
+      \ 'c' : [':G commit', 'commit'],
+      \ 'd' : [':SignifyHunkDiff', 'inline diff'],
+      \ 'D' : [':SignifyHunkUndo', 'undo hunk'],
+      \ 'f' : [':G fetch', 'fetch'],
+      \ 'g' : [':vertical G', 'add current file'],
+      \ 'G' : [':Gbrowse', 'open file in Github'],
+      \ 'l' : [':Telescope git_bcommits', 'list buffer commits'],
+      \ 'L' : [':Telescope git_commits', 'list commits'],
       \ 'p' : [':G push', 'push'],
       \ 'P' : [':G pull', 'pull'],
-      \ 'B' : [':Gbrowse', 'browse'],
-      \ 'b' : [':G blame', 'blame'],
-      \ 'l' : [':GV', 'log'],
+      \ 's' : [':G stash', 'stash'],
       \ }
 
 " Register which key map
