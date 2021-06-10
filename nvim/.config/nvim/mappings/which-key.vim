@@ -59,8 +59,8 @@ let g:which_key_map.g = {
       \ 'A' : [':G add .', 'add all'],
       \ 'P' : [':G push', 'push'],
       \ 'p' : [':G pull', 'pull'],
-      \ 'b' : [':Gbrowse', 'browse'],
-      \ 'B' : [':G blame', 'blame'],
+      \ 'B' : [':Gbrowse', 'browse'],
+      \ 'b' : [':G blame', 'blame'],
       \ 'l' : [':GV', 'log'],
       \ }
 
