@@ -31,7 +31,16 @@ let g:which_key_map['q'] = [ ':q!' , 'close buffer' ]
 let g:which_key_map['%'] = [ ':so %' , 'close buffer' ]
 let g:which_key_map['a'] = [ ':G add %' , 'git add' ]
 let g:which_key_map['c'] = [ ':cclose' , 'close list' ]
-let g:which_key_map['l'] = [ ':copen' , 'open list' ]
+let g:which_key_map['C'] = [ ':lclose' , 'close local list' ]
+let g:which_key_map['o'] = [ ':copen' , 'open list' ]
+let g:which_key_map['O'] = [ ':lopen' , 'open local list' ]
+
+" l is for lsp
+let g:which_key_map.l = {
+      \ 'name' : '+lsp' ,
+      \ 'k' : [':lua vim.lsp.buf.formatting()', 'format file'],
+      \ 'w' : ['*', 'word'],
+      \ }
 
 " f is for find
 let g:which_key_map.f = {
