@@ -39,7 +39,6 @@ let g:which_key_map['O'] = [ ':lopen' , 'open local list' ]
 let g:which_key_map.l = {
       \ 'name' : '+lsp' ,
       \ 'k' : [':lua vim.lsp.buf.formatting()', 'format file'],
-      \ 'w' : ['*', 'word'],
       \ }
 
 " f is for find
