@@ -32,10 +32,19 @@ let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
 " let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 " let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
 
-" s is for search
-let g:which_key_map.s = {
-      \ 'name' : '+search' ,
-      \ 'f' : [':Telescope find_files<CR>', 'find files'],
+" f is for find
+let g:which_key_map.f = {
+      \ 'name' : '+find' ,
+      \ 'f' : [':Telescope find_files', 'file'],
+      \ 'w' : ['*', 'word'],
+      \ }
+
+" g is for git
+let g:which_key_map.g = {
+      \ 'name' : '+git' ,
+      \ 's' : [':G', 'status'],
+      \ 'c' : [':G commit', 'commit'],
+      \ 'A' : [':G add .', 'add all'],
       \ }
 
 " Register which key map
