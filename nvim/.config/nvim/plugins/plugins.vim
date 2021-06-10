@@ -20,6 +20,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Themes
 Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 " Icons
 Plug 'kyazdani42/nvim-web-devicons'
 " Which Key
@@ -27,7 +28,7 @@ Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
 " Set the theme
-source $HOME/.config/nvim/themes/onedark.vim
+source $HOME/.config/nvim/themes/gruvbox.vim
 
 lua << EOF
 require'nvim-web-devicons'.setup {
@@ -53,4 +54,3 @@ source $HOME/.config/nvim/plugins/signify.vim
 source $HOME/.config/nvim/plugins/start-screen.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/airline.vim
-source $HOME/.config/nvim/plugins/which-key.vim
