@@ -57,7 +57,8 @@ let g:which_key_map.g = {
       \ 'c' : [':G commit --quiet', 'commit'],
       \ 'a' : [':Gwrite', 'add current file'],
       \ 'A' : [':G add .', 'add all'],
-      \ 'p' : [':Gpush', 'push'],
+      \ 'P' : [':G push', 'push'],
+      \ 'p' : [':G pull', 'pull'],
       \ }
 
 " Register which key map
