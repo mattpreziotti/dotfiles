@@ -54,7 +54,7 @@ let g:which_key_map.f = {
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
       \ 's' : [':vertical G', 'status'],
-      \ 'c' : [':G commit --quiet', 'commit'],
+      \ 'c' : [':G commit', 'commit'],
       \ 'a' : [':Gwrite', 'add current file'],
       \ 'A' : [':G add .', 'add all'],
       \ 'P' : [':G push', 'push'],
