@@ -27,14 +27,14 @@ let g:which_key_map['s'] = [ ':w' , 'save' ]
 let g:which_key_map['S'] = [ ':wq' , 'save & quit' ]
 let g:which_key_map['w'] = [ ':bd' , 'close buffer' ]
 let g:which_key_map['q'] = [ ':q!' , 'close buffer' ]
-let g:which_key_map['%'] = [ ':so %' , 'close buffer' ]
-let g:which_key_map['a'] = [ ':G add %' , 'git add' ]
+let g:which_key_map['%'] = [ ':so %' , 'source file' ]
+let g:which_key_map['a'] = [ ':G add %' , 'git add current file' ]
 let g:which_key_map['c'] = [ ':cclose' , 'close list' ]
 let g:which_key_map['C'] = [ ':lclose' , 'close local list' ]
 let g:which_key_map['o'] = [ ':copen' , 'open list' ]
 let g:which_key_map['O'] = [ ':lopen' , 'open local list' ]
-let g:which_key_map['n'] = [ ':NERDTreeToggle' , 'Toggle Nerd Tree' ]
-let g:which_key_map['.'] = [ ':Startify' , 'Startify' ]
+let g:which_key_map['n'] = [ ':NERDTreeToggle' , 'nerd tree' ]
+let g:which_key_map['.'] = [ ':Startify' , 'startify' ]
 
 " l is for lsp
 let g:which_key_map.l = {
@@ -55,10 +55,10 @@ let g:which_key_map.g = {
       \ 'name' : '+git' ,
       \ 's' : [':vertical G', 'status'],
       \ 'c' : [':G commit', 'commit'],
-      \ 'a' : [':Gwrite', 'add current file'],
+      \ 'a' : [':G add %', 'add current file'],
       \ 'A' : [':G add .', 'add all'],
-      \ 'P' : [':G push', 'push'],
-      \ 'p' : [':G pull', 'pull'],
+      \ 'p' : [':G push', 'push'],
+      \ 'P' : [':G pull', 'pull'],
       \ 'B' : [':Gbrowse', 'browse'],
       \ 'b' : [':G blame', 'blame'],
       \ 'l' : [':GV', 'log'],
