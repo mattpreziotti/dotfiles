@@ -1,6 +1,6 @@
 let g:startify_lists = [
-          \ { 'type': 'dir',       'header': ['   Project Root '] },
           \ { 'type': 'files',     'header': ['   Recent Files']            },
+          \ { 'type': 'dir',       'header': ['   Project Root '] },
           \ { 'type': 'sessions',  'header': ['   Sessions']       },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]

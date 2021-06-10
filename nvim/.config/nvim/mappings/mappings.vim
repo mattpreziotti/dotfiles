@@ -4,12 +4,6 @@ inoremap fd <Esc>
 inoremap df <Esc>
 vnoremap fd <Esc>
 vnoremap df <Esc>
-nnoremap <leader>. :Startify<cr>
-
-" File Modifiers 
-nnoremap <C-S> :w<cr>
-nnoremap <C-Q> :q<cr>
-nnoremap <C-W> :bd<cr>
 
 " Easier command mode
 nnoremap ; :

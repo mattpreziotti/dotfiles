@@ -6,7 +6,6 @@ vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 let g:which_key_map =  {}
 " Define a separator
 let g:which_key_sep = '→'
-" set timeoutlen=100
 
 " Not a fan of floating windows for this
 let g:which_key_use_floating_win = 0
@@ -35,6 +34,7 @@ let g:which_key_map['C'] = [ ':lclose' , 'close local list' ]
 let g:which_key_map['o'] = [ ':copen' , 'open list' ]
 let g:which_key_map['O'] = [ ':lopen' , 'open local list' ]
 let g:which_key_map['n'] = [ ':NERDTreeToggle' , 'Toggle Nerd Tree' ]
+let g:which_key_map['.'] = [ ':Startify' , 'Startify' ]
 
 " l is for lsp
 let g:which_key_map.l = {
