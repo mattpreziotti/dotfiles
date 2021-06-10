@@ -25,6 +25,8 @@ Plug 'morhetz/gruvbox'
 Plug 'kyazdani42/nvim-web-devicons'
 " Which Key
 Plug 'liuchengxu/vim-which-key'
+" NerdTree
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " Set the theme

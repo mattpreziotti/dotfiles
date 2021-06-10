@@ -34,6 +34,7 @@ let g:which_key_map['c'] = [ ':cclose' , 'close list' ]
 let g:which_key_map['C'] = [ ':lclose' , 'close local list' ]
 let g:which_key_map['o'] = [ ':copen' , 'open list' ]
 let g:which_key_map['O'] = [ ':lopen' , 'open local list' ]
+let g:which_key_map['n'] = [ ':NERDTreeToggle' , 'Toggle Nerd Tree' ]
 
 " l is for lsp
 let g:which_key_map.l = {
