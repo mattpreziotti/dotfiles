@@ -27,8 +27,11 @@ let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
 let g:which_key_map['s'] = [ ':w' , 'save' ]
 let g:which_key_map['S'] = [ ':wq' , 'save & quit' ]
 let g:which_key_map['w'] = [ ':bd' , 'close buffer' ]
-let g:which_key_map['q'] = [ ':q!' , 'close buffer' ]
+let g:which_key_map['Q'] = [ ':q!' , 'close buffer' ]
 let g:which_key_map['%'] = [ ':so %' , 'close buffer' ]
+let g:which_key_map['a'] = [ ':G add %' , 'git add' ]
+let g:which_key_map['c'] = [ ':cclose' , 'close list' ]
+let g:which_key_map['q'] = [ ':copen' , 'open list' ]
 
 " f is for find
 let g:which_key_map.f = {
@@ -45,6 +48,7 @@ let g:which_key_map.g = {
       \ 'c' : [':G commit --quiet', 'commit'],
       \ 'a' : [':Gwrite', 'add current file'],
       \ 'A' : [':G add .', 'add all'],
+      \ 'p' : [':Gpush', 'push'],
       \ }
 
 " Register which key map
