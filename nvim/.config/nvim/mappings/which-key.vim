@@ -24,18 +24,17 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 " Single mappings
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
-" let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
-" let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
-" let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
-" let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
-" let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
-" let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-" let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
+let g:which_key_map['s'] = [ ':w' , 'save' ]
+let g:which_key_map['S'] = [ ':wq' , 'save & quit' ]
+let g:which_key_map['w'] = [ ':bd' , 'close buffer' ]
+let g:which_key_map['q'] = [ ':q!' , 'close buffer' ]
+let g:which_key_map['%'] = [ ':so %' , 'close buffer' ]
 
 " f is for find
 let g:which_key_map.f = {
       \ 'name' : '+find' ,
       \ 'f' : [':Telescope find_files', 'file'],
+      \ 'g' : [':Telescope live_grep', 'live grep'],
       \ 'w' : ['*', 'word'],
       \ }
 
@@ -44,6 +43,7 @@ let g:which_key_map.g = {
       \ 'name' : '+git' ,
       \ 's' : [':G', 'status'],
       \ 'c' : [':G commit --quiet', 'commit'],
+      \ 'a' : [':Gwrite', 'add current file'],
       \ 'A' : [':G add .', 'add all'],
       \ }
 
