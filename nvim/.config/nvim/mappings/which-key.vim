@@ -43,7 +43,7 @@ let g:which_key_map.f = {
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
       \ 's' : [':G', 'status'],
-      \ 'c' : [':G commit', 'commit'],
+      \ 'c' : [':G commit --quiet', 'commit'],
       \ 'A' : [':G add .', 'add all'],
       \ }
 
