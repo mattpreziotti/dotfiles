@@ -59,7 +59,7 @@ let g:which_key_map.g = {
       \ 'd' : [':SignifyHunkDiff', 'inline diff'],
       \ 'D' : [':SignifyHunkUndo', 'undo hunk'],
       \ 'f' : [':G fetch', 'fetch'],
-      \ 'g' : [':vertical G', 'add current file'],
+      \ 'g' : [':vertical G', 'status'],
       \ 'G' : [':Gbrowse', 'open file in Github'],
       \ 'l' : [':Telescope git_bcommits', 'list buffer commits'],
       \ 'L' : [':Telescope git_commits', 'list commits'],
