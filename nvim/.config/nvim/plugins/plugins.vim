@@ -21,16 +21,24 @@ Plug 'vim-airline/vim-airline-themes'
 " Themes
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
-" Icons
-Plug 'kyazdani42/nvim-web-devicons'
 " Which Key
 Plug 'liuchengxu/vim-which-key'
 " NerdTree
 Plug 'preservim/nerdtree'
+" Icons
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 " Set the theme
 source $HOME/.config/nvim/themes/gruvbox.vim
+
+" Plugin specific settings
+source $HOME/.config/nvim/plugins/lspconfig.vim
+source $HOME/.config/nvim/plugins/compe.vim
+source $HOME/.config/nvim/plugins/signify.vim
+source $HOME/.config/nvim/plugins/start-screen.vim
+source $HOME/.config/nvim/plugins/telescope.vim
+source $HOME/.config/nvim/plugins/airline.vim
 
 lua << EOF
 require'nvim-web-devicons'.setup {
@@ -48,11 +56,3 @@ require'nvim-web-devicons'.setup {
  default = true;
 }
 EOF
-
-" Plugin specific settings
-source $HOME/.config/nvim/plugins/lspconfig.vim
-source $HOME/.config/nvim/plugins/compe.vim
-source $HOME/.config/nvim/plugins/signify.vim
-source $HOME/.config/nvim/plugins/start-screen.vim
-source $HOME/.config/nvim/plugins/telescope.vim
-source $HOME/.config/nvim/plugins/airline.vim
