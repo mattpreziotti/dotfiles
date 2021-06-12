@@ -7,6 +7,7 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
 " Startify
 Plug 'mhinz/vim-startify'
 " Telescope
