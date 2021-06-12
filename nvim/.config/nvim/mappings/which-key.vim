@@ -26,12 +26,15 @@ let g:which_key_map['.'] = [ ':Startify' , 'startify' ]
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
 let g:which_key_map['%'] = [ ':so %' , 'source file' ]
 let g:which_key_map['a'] = [ ':G add %' , 'git add current file' ]
+let g:which_key_map['A'] = [ ':G add .' , 'git add all' ]
 let g:which_key_map['d'] = [':SignifyHunkDiff', 'inline diff']
 let g:which_key_map['D'] = [':SignifyHunkUndo', 'undo hunk']
 let g:which_key_map['n'] = [ ':NERDTreeToggle' , 'nerd tree' ]
 let g:which_key_map['q'] = [ ':q!' , 'quit' ]
 let g:which_key_map['s'] = [ ':w' , 'save' ]
 let g:which_key_map['S'] = [ ':wq' , 'save & quit' ]
+let g:which_key_map['u'] = [':G reset HEAD %', 'unstage buffer']
+let g:which_key_map['U'] = [':G reset HEAD .', 'unstage all files']
 let g:which_key_map['w'] = [ ':bd' , 'close buffer' ]
 
 " l is for lsp
@@ -54,17 +57,19 @@ let g:which_key_map.g = {
       \ 'a' : [':G add %', 'add current file'],
       \ 'A' : [':G add .', 'add all'],
       \ 'b' : [':G blame', 'blame'],
+      \ 'B' : [':Gbrowse', 'open file in Github'],
       \ 'c' : [':G commit', 'commit'],
       \ 'd' : [':SignifyHunkDiff', 'inline diff'],
       \ 'D' : [':SignifyHunkUndo', 'undo hunk'],
       \ 'f' : [':G fetch', 'fetch'],
       \ 'g' : [':vertical G', 'status'],
-      \ 'G' : [':Gbrowse', 'open file in Github'],
       \ 'l' : [':GV!', 'list buffer commits'],
       \ 'L' : [':GV', 'list commits'],
       \ 'p' : [':G push', 'push'],
       \ 'P' : [':G pull', 'pull'],
       \ 's' : [':G stash', 'stash'],
+      \ 'u' : [':G reset HEAD %', 'unstage buffer'],
+      \ 'U' : [':G reset HEAD .', 'unstage all files'],
       \ }
 
 " Register which key map
