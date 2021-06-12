@@ -27,6 +27,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'preservim/nerdtree'
 " Icons
 Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 " Set the theme
