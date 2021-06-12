@@ -26,7 +26,7 @@ Plug 'liuchengxu/vim-which-key'
 " NerdTree
 Plug 'preservim/nerdtree'
 " Icons
-Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Set the theme
@@ -39,20 +39,3 @@ source $HOME/.config/nvim/plugins/signify.vim
 source $HOME/.config/nvim/plugins/start-screen.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/airline.vim
-
-lua << EOF
-require'nvim-web-devicons'.setup {
- -- your personnal icons can go here (to override)
- -- DevIcon will be appended to `name`
- override = {
-  zsh = {
-    icon = "",
-    color = "#428850",
-    name = "Zsh"
-  }
- };
- -- globally enable default icons (default to false)
- -- will get overriden by `get_icons` option
- default = true;
-}
-EOF
