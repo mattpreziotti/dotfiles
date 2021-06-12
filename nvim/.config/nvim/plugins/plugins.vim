@@ -25,6 +25,8 @@ Plug 'morhetz/gruvbox'
 Plug 'liuchengxu/vim-which-key'
 " NerdTree
 Plug 'preservim/nerdtree'
+" Commenter
+Plug 'tpope/vim-commentary'
 " Icons
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
