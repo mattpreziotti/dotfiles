@@ -5,7 +5,6 @@ set expandtab
 set smartindent 
 set exrc
 set number
-set relativenumber
 set nohlsearch
 set hidden
 set noerrorbells
