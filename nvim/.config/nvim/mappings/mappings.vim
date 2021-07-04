@@ -87,5 +87,8 @@ function! CleverTab()
 endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
+" Emmet
+let g:user_emmet_leader_key=','
+
 " Which-key mappings
 source $HOME/.config/nvim/mappings/which-key.vim

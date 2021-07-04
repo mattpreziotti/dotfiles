@@ -41,7 +41,6 @@ let g:which_key_map['w'] = 'close buffer'
 " l is for lsp
 let g:which_key_map.l = {
       \ 'name' : '+lsp' ,
-      \ 'k' : 'format file',
       \ }
 
 " f is for find

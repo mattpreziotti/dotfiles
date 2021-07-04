@@ -27,6 +27,10 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'preservim/nerdtree'
 " Commenter
 Plug 'tpope/vim-commentary'
+" Misc
+Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim'
+Plug 'jiangmiao/auto-pairs'
 " Icons
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
