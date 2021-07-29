@@ -12,7 +12,6 @@ set nowrap
 set incsearch
 set termguicolors
 set signcolumn=yes
-set colorcolumn=80
 set completeopt=menuone,noinsert,noselect
 set encoding=utf-8
 

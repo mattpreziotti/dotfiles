@@ -27,10 +27,13 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'preservim/nerdtree'
 " Commenter
 Plug 'tpope/vim-commentary'
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
 " Misc
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'chrisbra/Colorizer'
 " Icons
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
