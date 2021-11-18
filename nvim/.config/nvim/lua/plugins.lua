@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
     use {
         'kdheepak/lazygit.nvim', -- This plugin is sweeeeeet
         { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' },
+        'tpope/vim-fugitive',
         config = require'config.git'
     }
 

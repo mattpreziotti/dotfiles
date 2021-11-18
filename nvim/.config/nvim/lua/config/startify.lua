@@ -18,10 +18,12 @@ vim.g['startify_lists'] = {
 }
 
 vim.g['startify_bookmarks'] = {
-    { s = '~/.config/nvim/lua/settings.lua' },
-    { m = '~/.config/nvim/lua/mappings.lua' },
-    { p = '~/.config/nvim/lua/plugins.lua' },
-    { z = '~/.zshrc' },
+    { s = '~/.dotfiles/nvim/.config/nvim/lua/settings.lua' },
+    { m = '~/.dotfiles/nvim/.config/nvim/lua/mappings.lua' },
+    { p = '~/.dotfiles/nvim/.config/nvim/lua/plugins.lua' },
+    { z = '~/.dotfiles/zsh/.config/zsh/.zshrc' },
+    { t = '~/.dotfiles/tmux/.config/tmux/tmux.conf' },
+    { K = '~/.dotfiles/kitty/.config/kitty/kitty.conf' },
 }
 
 -- Settings
