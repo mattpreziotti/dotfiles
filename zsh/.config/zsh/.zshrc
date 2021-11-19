@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Set Neovim as editor
+export EDITOR=nvim
+
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
 setopt interactive_comments
@@ -43,13 +46,13 @@ zsh_add_completion "esc/conda-zsh-completion" false
 # More completions https://github.com/zsh-users/zsh-completions
 
 # Key-bindings
-bindkey -s '^o' 'ranger^M'
-bindkey -s '^f' 'zi^M'
-bindkey -s '^s' 'ncdu^M'
+# bindkey -s '^o' 'ranger^M'
+# bindkey -s '^f' 'zi^M'
+# bindkey -s '^s' 'ncdu^M'
 # bindkey -s '^n' 'nvim $(fzf)^M'
 # bindkey -s '^v' 'nvim\n'
-bindkey -s '^z' 'zi^M'
-bindkey '^[[P' delete-char
+# bindkey -s '^z' 'zi^M'
+# bindkey '^[[P' delete-char
 bindkey "^p" up-line-or-beginning-search # Up
 bindkey "^n" down-line-or-beginning-search # Down
 bindkey "^k" up-line-or-beginning-search # Up
