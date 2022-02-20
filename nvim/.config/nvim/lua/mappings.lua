@@ -38,10 +38,10 @@ utils.map('n', '<leader>w', ':bd<cr>')
 utils.map('n', '<leader>%', ':so %<cr>')
 
 -- Smart split
-utils.map('n', '<leader>jj', [[:lua require('functions').WinMove('j')<cr>]])
-utils.map('n', '<leader>kk', [[:lua require('functions').WinMove('k')<cr>]])
-utils.map('n', '<leader>hh', [[:lua require('functions').WinMove('h')<cr>]])
-utils.map('n', '<leader>ll', [[:lua require('functions').WinMove('l')<cr>]])
+utils.map('n', '<leader>j', [[:lua require('functions').WinMove('j')<cr>]])
+utils.map('n', '<leader>k', [[:lua require('functions').WinMove('k')<cr>]])
+utils.map('n', '<leader>h', [[:lua require('functions').WinMove('h')<cr>]])
+utils.map('n', '<leader>l', [[:lua require('functions').WinMove('l')<cr>]])
 
 -- base leader mappings
 -- utils.map('n', '<leader>a', ':G add % --verbose<cr>')

@@ -27,16 +27,16 @@ local on_attach = function(client)
     utils.map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 
     -- diagnostic remaps
-    utils.map('n', '<leader>lk', '<cmd>lua vim.lsp.buf.hover()<CR>')
-    utils.map('n', '<leader>lD', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
-    utils.map('n', '<leader>ld', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
-    utils.map('n', '<leader>la', '<cmd>lua vim.lsp.buf.code_action()<CR>')
-    utils.map('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<CR>')
+    utils.map('n', '<leader>dk', '<cmd>lua vim.lsp.buf.hover()<CR>')
+    utils.map('n', '<leader>dD', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
+    utils.map('n', '<leader>dd', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
+    utils.map('n', '<leader>da', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+    utils.map('n', '<leader>dr', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
     -- workspace remaps
-    utils.map('n', '<leader>lwa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>')
-    utils.map('n', '<leader>lwd', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>')
-    utils.map('n', '<leader>lwl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>')
+    utils.map('n', '<leader>dwa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>')
+    utils.map('n', '<leader>dwd', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>')
+    utils.map('n', '<leader>dwl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>')
 
     --buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
     --buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
@@ -44,10 +44,10 @@ local on_attach = function(client)
 
     -- Set some keybinds conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
-        utils.map('n', '<leader>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>')
+        utils.map('n', '<leader>df', '<cmd>lua vim.lsp.buf.formatting()<CR>')
     end
     if client.resolved_capabilities.document_range_formatting then
-        utils.map('v', '<leader>lf', '<cmd>lua vim.lsp.buf.range_formatting()<CR>')
+        utils.map('v', '<leader>df', '<cmd>lua vim.lsp.buf.range_formatting()<CR>')
     end
 
     -- Set autocommands conditional on server_capabilities
@@ -87,4 +87,4 @@ end
 require("trouble").setup()
 
 -- Trouble mappings
-utils.map('n', '<leader>lt', ':TroubleToggle<CR>')
+utils.map('n', '<leader>dt', ':TroubleToggle<CR>')
