@@ -1,5 +1,5 @@
 local nvim_lsp = require('lspconfig')
-local utils = require('utils')
+local utils = require('prez.utils')
 
 -- LSP display settings
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -72,16 +72,16 @@ end
 
 -- Use a loop to conveniently both setup defined servers
 -- and map buffer local keybindings when the language server attaches
-require'lspinstall'.setup() -- important
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-local servers = require'lspinstall'.installed_servers()
-for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-        on_attach = on_attach,
-        capabilities = capabilities,
-        settings = utils.get_settings(lsp)
-    }
-end
+--require'lspinstall'.setup() -- important
+--local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+--local servers = require'lspinstall'.installed_servers()
+--for _, lsp in ipairs(servers) do
+--    nvim_lsp[lsp].setup {
+--        on_attach = on_attach,
+--        capabilities = capabilities,
+--        settings = utils.get_settings(lsp)
+--    }
+--end
 
 -- Setup trouble.nvim
 require("trouble").setup()

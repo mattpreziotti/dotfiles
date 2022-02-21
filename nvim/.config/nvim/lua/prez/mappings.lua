@@ -1,4 +1,4 @@
-local utils = require('utils')
+local utils = require('prez.utils')
 
 -- Map leader to space
 vim.g.mapleader = ' '
@@ -38,10 +38,10 @@ utils.map('n', '<leader>w', ':bd<cr>')
 utils.map('n', '<leader>%', ':so %<cr>')
 
 -- Smart split
-utils.map('n', '<leader>j', [[:lua require('functions').WinMove('j')<cr>]])
-utils.map('n', '<leader>k', [[:lua require('functions').WinMove('k')<cr>]])
-utils.map('n', '<leader>h', [[:lua require('functions').WinMove('h')<cr>]])
-utils.map('n', '<leader>l', [[:lua require('functions').WinMove('l')<cr>]])
+utils.map('n', '<leader>j', [[:lua require('prez.functions').WinMove('j')<cr>]])
+utils.map('n', '<leader>k', [[:lua require('prez.functions').WinMove('k')<cr>]])
+utils.map('n', '<leader>h', [[:lua require('prez.functions').WinMove('h')<cr>]])
+utils.map('n', '<leader>l', [[:lua require('prez.functions').WinMove('l')<cr>]])
 
 -- base leader mappings
 -- utils.map('n', '<leader>a', ':G add % --verbose<cr>')

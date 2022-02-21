@@ -35,6 +35,6 @@ vim.g['startify_session_persistence'] = 1
 vim.g['startify_enable_special'] = 0
 
 -- Mappings
-local utils = require'utils'
+local utils = require'prez.utils'
 utils.map('n', '<leader>.', ':Startify<CR>')
 utils.map('n', '<leader>S', ':SSave<cr>')

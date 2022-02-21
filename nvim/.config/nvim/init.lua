@@ -1,8 +1,8 @@
 -- Sensible defaults
-require('settings')
+require('prez.settings')
 
 -- Key mappings
-require('mappings')
+require('prez.mappings')
 
 -- Load plugins
-require('plugins')
+require('prez.plugins')

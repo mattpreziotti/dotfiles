@@ -1,5 +1,5 @@
 local telescope = require'telescope'
-local utils = require'utils'
+local utils = require'prez.utils'
 
 telescope.setup {}
 telescope.load_extension('fzf')

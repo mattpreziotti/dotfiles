@@ -1,4 +1,4 @@
-local utils = require'utils'
+local utils = require'prez.utils'
 
 -- LazyGit
 utils.map('n', '<leader>gg', ':LazyGit<CR>')

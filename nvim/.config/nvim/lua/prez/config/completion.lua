@@ -1,5 +1,5 @@
 local cmp = require'cmp'
-local utils = require'utils'
+local utils = require'prez.utils'
 local lspkind = require('lspkind')
 
 -- Completion Options
