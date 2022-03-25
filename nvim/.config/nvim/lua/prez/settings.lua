@@ -1,7 +1,7 @@
 local utils = require('prez.utils')
 
 local cmd = vim.cmd
-local indent = 4
+local indent = 2
 
 cmd 'syntax enable'
 cmd 'filetype plugin indent on'
@@ -43,4 +43,4 @@ utils.opt('o', 'termguicolors', true)
 utils.opt('o', 'showmode', false)
 
 -- Highlight on yank
-vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
+cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'

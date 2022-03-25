@@ -1,7 +1,14 @@
 require('lualine').setup {
-    options = {theme = 'tokyonight'},
+    options = {
+      theme = 'tokyonight'
+    },
     extensions = {'nvim-tree'},
-    tabline = {
-        lualine_a = {'buffers'},
+    sections = {
+      lualine_c = {
+        {
+          'filename',
+          path = 1
+        }
+      }
     }
 }

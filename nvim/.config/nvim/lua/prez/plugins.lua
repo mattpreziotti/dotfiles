@@ -4,11 +4,11 @@ local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
     packer_bootstrap = fn.system {
-        'git', 
-        'clone', 
-        '--depth', 
-        '1', 
-        'https://github.com/wbthomason/packer.nvim', 
+        'git',
+        'clone',
+        '--depth',
+        '1',
+        'https://github.com/wbthomason/packer.nvim',
         install_path
     }
     print "Installing packer close and reopen Neovim..."
@@ -43,12 +43,10 @@ return packer.startup(function(use)
 
     -- LSP
     use {
-        'neovim/nvim-lspconfig',
-        'kabouzeid/nvim-lspinstall',
-        'hrsh7th/cmp-nvim-lsp',
+        'williamboman/nvim-lsp-installer',
         'ray-x/lsp_signature.nvim',
-        { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" },
-        config = 'require("prez.config.lsp")'
+        { 'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons' },
+        { 'neovim/nvim-lspconfig', config = function() require('prez.config.lsp') end },
     }
 
     -- Completion
@@ -60,69 +58,76 @@ return packer.startup(function(use)
             'hrsh7th/cmp-cmdline',
             'hrsh7th/cmp-vsnip',
             'hrsh7th/vim-vsnip',
+            'hrsh7th/cmp-nvim-lsp',
             'onsails/lspkind-nvim'
         },
-        config = 'require("prez.config.completion")'
+        config = function() require('prez.config.completion') end
     }
 
     -- Telescope
     use {
-        {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'} },
         {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-        config = 'require("prez.config.finder")'
+        {
+            'nvim-telescope/telescope.nvim',
+            requires = 'nvim-lua/plenary.nvim',
+            config = function() require('prez.config.finder') end
+        },
     }
 
     -- Git
     use {
-        'kdheepak/lazygit.nvim', -- This plugin is sweeeeeet
-        { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' },
+        'kdheepak/lazygit.nvim',
         'tpope/vim-fugitive',
-        config = 'require("prez.config.git")'
+        {
+            'lewis6991/gitsigns.nvim',
+            requires = 'nvim-lua/plenary.nvim',
+            config = function() require('prez.config.git') end
+        }
     }
 
     -- Lualine
     use {
         'nvim-lualine/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons'},
-        config = 'require("prez.config.statusline")'
+        config = function() require('prez.config.statusline') end
     }
 
     -- Treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
-        config = 'require("prez.config.treesitter")'
+        config = function() require('prez.config.treesitter') end
     }
 
     -- Theme
     use {
         'folke/tokyonight.nvim',
-        config = 'require("prez.themes.tokyonight")'
+        config = function() require("prez.themes.tokyonight") end
     }
 
     -- File Tree
     use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons',
-        config = 'require("prez.config.tree")'
+        config = function() require('prez.config.tree') end
     }
 
     -- Startify
     use {
         'mhinz/vim-startify',
-        config = 'require("prez.config.startify")'
+        config = function() require("prez.config.startify") end
     }
 
     -- Comment things
     use {
         'tpope/vim-commentary',
-        config = 'require("prez.config.comment")'
+        config = function() require("prez.config.comment") end
     }
 
     -- Auto pairs
     use {
         'windwp/nvim-autopairs',
-        config = 'require("nvim-autopairs").setup{}'
+        config = function() require("nvim-autopairs").setup{} end
     }
 
     use "wbthomason/packer.nvim" -- Have packer manage itself
