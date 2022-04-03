@@ -42,12 +42,9 @@ packer.init {
 return packer.startup(function(use)
 
     -- LSP
-    use {
-        'williamboman/nvim-lsp-installer',
-        'ray-x/lsp_signature.nvim',
-        { 'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons' },
-        { 'neovim/nvim-lspconfig', config = function() require('prez.config.lsp') end },
-    }
+    use { 'williamboman/nvim-lsp-installer', requires = 'neovim/nvim-lspconfig', config = function() require('prez.config.lsp.lsp-installer') end }
+    use { 'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons', config = function() require('prez.config.lsp.trouble') end }
+    use { 'ray-x/lsp_signature.nvim' }
 
     -- Completion
     use {
@@ -59,76 +56,51 @@ return packer.startup(function(use)
             'hrsh7th/cmp-vsnip',
             'hrsh7th/vim-vsnip',
             'hrsh7th/cmp-nvim-lsp',
-            'onsails/lspkind-nvim'
+            'onsails/lspkind-nvim',
+            'hrsh7th/cmp-emoji'
         },
-        config = function() require('prez.config.completion') end
+        config = function() require('prez.config.nvim-cmp') end
     }
+
+    -- Testing
+    use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+
+    -- Debugging
+    use { 'mfussenegger/nvim-dap', config = function() require("prez.config.debug.nvim-dap") end }
+    use { 'theHamsta/nvim-dap-virtual-text', config = function () require("prez.config.debug.nvim-dap-virtual-text") end }
+    use { 'leoluz/nvim-dap-go', config = function () require("prez.config.debug.nvim-dap-go") end }
 
     -- Telescope
-    use {
-        {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-        {
-            'nvim-telescope/telescope.nvim',
-            requires = 'nvim-lua/plenary.nvim',
-            config = function() require('prez.config.finder') end
-        },
-    }
+    use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim', config = function() require('prez.config.telescope') end }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
     -- Git
-    use {
-        'kdheepak/lazygit.nvim',
-        'tpope/vim-fugitive',
-        {
-            'lewis6991/gitsigns.nvim',
-            requires = 'nvim-lua/plenary.nvim',
-            config = function() require('prez.config.git') end
-        }
-    }
+    use { 'kdheepak/lazygit.nvim', 'tpope/vim-fugitive' }
+    use { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim', config = function() require('prez.config.git') end }
 
     -- Lualine
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons'},
-        config = function() require('prez.config.statusline') end
-    }
+    use { 'nvim-lualine/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons', config = function() require('prez.config.lualine') end }
 
     -- Treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-        config = function() require('prez.config.treesitter') end
-    }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = function() require('prez.config.nvim-treesitter') end }
 
     -- Theme
-    use {
-        'folke/tokyonight.nvim',
-        config = function() require("prez.themes.tokyonight") end
-    }
+    use { 'folke/tokyonight.nvim', config = function() require("prez.themes.tokyonight") end }
 
     -- File Tree
-    use {
-        'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons',
-        config = function() require('prez.config.tree') end
-    }
+    use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons', config = function() require('prez.config.nvim-tree') end }
 
     -- Startify
-    use {
-        'mhinz/vim-startify',
-        config = function() require("prez.config.startify") end
-    }
+    use { 'mhinz/vim-startify', config = function() require("prez.config.vim-startify") end }
 
     -- Comment things
-    use {
-        'tpope/vim-commentary',
-        config = function() require("prez.config.comment") end
-    }
+    use { 'tpope/vim-commentary', config = function() require("prez.config.vim-commentary") end }
 
     -- Auto pairs
-    use {
-        'windwp/nvim-autopairs',
-        config = function() require("nvim-autopairs").setup{} end
-    }
+    use { 'windwp/nvim-autopairs', config = function() require("nvim-autopairs").setup{} end }
+
+    -- Vimux
+    use { 'preservim/vimux', config = function() require("prez.config.tmux") end }
 
     use "wbthomason/packer.nvim" -- Have packer manage itself
 
