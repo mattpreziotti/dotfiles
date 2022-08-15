@@ -25,9 +25,9 @@ utils.map('n', '<C-j>', ':cnext<cr>')
 utils.map('n', '<C-k>', ':cprev<cr>')
 
 -- hjkl super navigation
-utils.map('n', '<S-j>', 'getcurpos()[1] == line("w$") ? "<PageDown>" : "L"', nil, { expr = true })
-utils.map('n', '<S-k>', 'getcurpos()[1] == line("w0") ? "<PageUp>" : "H"', nil, { expr = true })
-utils.map('n', '<S-h>', '0')
+utils.map('n', '<S-h>', '_')
+utils.map('n', '<S-j>', '<PageDown>')
+utils.map('n', '<S-k>', '<PageUp>')
 utils.map('n', '<S-l>', '$')
 
 -- Buffer manipulation
@@ -38,10 +38,10 @@ utils.map('n', '<leader>w', ':bd<cr>')
 utils.map('n', '<leader>%', ':so %<cr>')
 
 -- Smart split
-utils.map('n', '<leader>j', [[:lua require('prez.utils').WinMove('j')<cr>]])
-utils.map('n', '<leader>k', [[:lua require('prez.utils').WinMove('k')<cr>]])
-utils.map('n', '<leader>h', [[:lua require('prez.utils').WinMove('h')<cr>]])
-utils.map('n', '<leader>l', [[:lua require('prez.utils').WinMove('l')<cr>]])
+-- utils.map('n', '<leader>j', [[:lua require('prez.utils').WinMove('j')<cr>]])
+-- utils.map('n', '<leader>k', [[:lua require('prez.utils').WinMove('k')<cr>]])
+-- utils.map('n', '<leader>h', [[:lua require('prez.utils').WinMove('h')<cr>]])
+-- utils.map('n', '<leader>l', [[:lua require('prez.utils').WinMove('l')<cr>]])
 
 -- base leader mappings
 -- utils.map('n', '<leader>a', ':G add % --verbose<cr>')

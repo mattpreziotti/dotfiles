@@ -50,20 +50,28 @@ return packer.startup(function(use)
     use {
         'hrsh7th/nvim-cmp',
         requires = {
+            -- Language
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-nvim-lua',
+
+            -- Snippets
+            'L3MON4D3/LuaSnip',
+            'saadparwaiz1/cmp_luasnip',
+
+            -- Misc
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-cmdline',
-            'hrsh7th/cmp-vsnip',
-            'hrsh7th/vim-vsnip',
-            'hrsh7th/cmp-nvim-lsp',
+
+            -- icons
             'onsails/lspkind-nvim',
-            'hrsh7th/cmp-emoji'
+            'hrsh7th/cmp-emoji',
         },
         config = function() require('prez.config.nvim-cmp') end
     }
 
     -- Testing
-    use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+    -- use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
 
     -- Debugging
     use { 'mfussenegger/nvim-dap', config = function() require("prez.config.debug.nvim-dap") end }
@@ -73,10 +81,15 @@ return packer.startup(function(use)
     -- Telescope
     use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim', config = function() require('prez.config.telescope') end }
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { 'nvim-telescope/telescope-dap.nvim' }
 
     -- Git
-    use { 'kdheepak/lazygit.nvim', 'tpope/vim-fugitive' }
+    use { 'kdheepak/lazygit.nvim' }
+    use { 'tpope/vim-fugitive' }
     use { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim', config = function() require('prez.config.git') end }
+
+    -- Easymotion
+    use 'ggandor/lightspeed.nvim'
 
     -- Lualine
     use { 'nvim-lualine/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons', config = function() require('prez.config.lualine') end }
@@ -99,8 +112,15 @@ return packer.startup(function(use)
     -- Auto pairs
     use { 'windwp/nvim-autopairs', config = function() require("nvim-autopairs").setup{} end }
 
-    -- Vimux
-    use { 'preservim/vimux', config = function() require("prez.config.tmux") end }
+    -- Tmux
+    use { 'preservim/vimux', config = function() require("prez.config.tmux.vimux") end }
+    use { 'christoomey/vim-tmux-navigator', config = function() require("prez.config.tmux.vim-tmux-navigator") end }
+
+    -- indent line
+    use { 'lukas-reineke/indent-blankline.nvim', config = function() require('prez.config.indent-blankline') end }
+
+    -- Folding
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async', config = function() require('ufo').setup() end}
 
     use "wbthomason/packer.nvim" -- Have packer manage itself
 

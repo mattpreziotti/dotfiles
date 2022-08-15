@@ -2,6 +2,7 @@
 
 # Set Neovim as editor
 export EDITOR=nvim
+export GIT_EDITOR=nvim
 
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
@@ -73,3 +74,5 @@ compinit
 autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line
 
+# enable asdf
+. /usr/local/opt/asdf/libexec/asdf.sh

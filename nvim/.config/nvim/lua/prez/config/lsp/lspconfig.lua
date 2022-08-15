@@ -63,10 +63,10 @@ end
 local function lsp_keymaps(client, bufnr)
 
     -- go to remaps
-    utils.map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', bufnr)
-    utils.map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', bufnr)
-    utils.map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', bufnr)
-    utils.map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', bufnr)
+    -- utils.map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', bufnr)
+    -- utils.map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', bufnr)
+    -- utils.map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', bufnr)
+    -- utils.map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', bufnr)
 
     -- diagnostic remaps
     utils.map('n', '<leader>dk', '<cmd>lua vim.lsp.buf.hover()<CR>', bufnr)
@@ -98,13 +98,6 @@ M.on_attach = function(client, bufnr)
   lsp_highlight_document(client)
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-
-local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not status_ok then
-  return
-end
-
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+M.capabilities = require'cmp_nvim_lsp'.update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 return M

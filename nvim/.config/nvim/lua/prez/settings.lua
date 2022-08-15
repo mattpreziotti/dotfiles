@@ -42,7 +42,8 @@ utils.opt('o', 'termguicolors', true)
 -- Don't show mode (statusline will show)
 utils.opt('o', 'showmode', false)
 
--- vim.g['python3_host_prog'] = '/usr/local/bin/python'
+-- global statusline
+utils.opt('o', 'laststatus', 3)
 
 -- Highlight on yank
 cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
