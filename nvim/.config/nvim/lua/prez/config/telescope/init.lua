@@ -2,9 +2,32 @@ local telescope = require'telescope'
 local utils = require'prez.utils'
 local builtin = require'telescope.builtin'
 
-telescope.setup {}
+telescope.setup {
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {
+        -- even more opts
+      }
+
+      -- pseudo code / specification for writing custom displays, like the one
+      -- for "codeactions"
+      -- specific_opts = {
+      --   [kind] = {
+      --     make_indexed = function(items) -> indexed_items, width,
+      --     make_displayer = function(widths) -> displayer
+      --     make_display = function(displayer) -> function(e)
+      --     make_ordinal = function(e) -> string
+      --   },
+      --   -- for example to disable the custom builtin "codeactions" display
+      --      do the following
+      --   codeactions = false,
+      -- }
+    }
+  }
+}
 telescope.load_extension('fzf')
 telescope.load_extension('dap')
+telescope.load_extension('ui-select')
 
 -- search mappings
 vim.keymap.set('n', '<leader>ff', function() builtin.find_files({results_title=vim.fn.getcwd()}) end)

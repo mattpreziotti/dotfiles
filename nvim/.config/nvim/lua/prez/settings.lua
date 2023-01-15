@@ -16,6 +16,7 @@ utils.opt('o', 'shiftround', true)
 -- Buffers
 utils.opt('o', 'hidden', true)
 utils.opt('w', 'number', true)
+utils.opt('w', 'relativenumber', true)
 utils.opt('w', 'wrap', false)
 utils.opt('w', 'signcolumn', 'yes')
 

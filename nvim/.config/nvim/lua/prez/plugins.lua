@@ -79,17 +79,17 @@ return packer.startup(function(use)
     use { 'leoluz/nvim-dap-go', config = function () require("prez.config.debug.nvim-dap-go") end }
 
     -- Telescope
-    use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim', config = function() require('prez.config.telescope') end }
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use { 'nvim-telescope/telescope-dap.nvim' }
+    use {'nvim-telescope/telescope-ui-select.nvim' }
+    use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim', config = function() require('prez.config.telescope') end }
 
     -- Git
-    use { 'kdheepak/lazygit.nvim' }
-    use { 'tpope/vim-fugitive' }
-    use { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim', config = function() require('prez.config.git') end }
+    use { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' }
+    use { 'ldelossa/gh.nvim', requires = 'ldelossa/litee.nvim', config = function() require('prez.config.git') end }
 
-    -- Easymotion
-    use 'ggandor/lightspeed.nvim'
+    -- Floaterm
+    use { 'voldikss/vim-floaterm', config = function() require('prez.config.floaterm') end }
 
     -- Lualine
     use { 'nvim-lualine/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons', config = function() require('prez.config.lualine') end }
@@ -120,7 +120,7 @@ return packer.startup(function(use)
     use { 'lukas-reineke/indent-blankline.nvim', config = function() require('prez.config.indent-blankline') end }
 
     -- Folding
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async', config = function() require('ufo').setup() end}
+    -- use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async', config = function() require('ufo').setup() end}
 
     use "wbthomason/packer.nvim" -- Have packer manage itself
 

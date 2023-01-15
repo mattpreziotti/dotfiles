@@ -2,7 +2,6 @@
 
 # Set Neovim as editor
 export EDITOR=nvim
-export GIT_EDITOR=nvim
 
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
@@ -40,7 +39,7 @@ zsh_add_file "zsh-prompt"
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+# zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
 zsh_add_completion "esc/conda-zsh-completion" false
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins

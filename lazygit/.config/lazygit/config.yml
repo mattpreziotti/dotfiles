@@ -1,0 +1,13 @@
+os:
+  editCommand: 'floaterm'
+
+gui:
+  theme:
+    selectedLineBgColor:
+      - underline
+    selectedRangeColor:
+      - underline
+git:
+  paging:
+    colorArg: never
+    pager: delta --dark --paging=never
