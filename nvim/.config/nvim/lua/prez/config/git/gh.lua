@@ -1,12 +1,4 @@
--- require('prez.config.git.gh')
--- require('prez.config.git.gitsigns')
-
-require('litee.lib').setup({
-    panel = {
-        orientation = "right",
-        panel_size  = 50
-    }
-})
+require('litee.lib').setup()
 require('litee.gh').setup({
   -- deprecated, around for compatability for now.
   jump_mode   = "invoking",
@@ -50,15 +42,3 @@ require('litee.gh').setup({
       goto_web = "gx"
   }
 })
-
-local utils = require'prez.utils'
-
-utils.map('n', '<leader>gp', ':Gitsigns preview_hunk<CR>')
-utils.map('n', '<leader>gj', ':Gitsigns next_hunk<CR>')
-utils.map('n', '<leader>gk', ':Gitsigns prev_hunk<CR>')
-utils.map('n', '<leader>gb', ':Gitsigns blame_line<CR>')
-
-require('gitsigns').setup {
-    signcolumn = false,
-    numhl = true
-}
