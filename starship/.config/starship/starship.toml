@@ -1,0 +1,11 @@
+[directory]
+style = "blue bold"
+
+[package]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[git_metrics]
+disabled = true
