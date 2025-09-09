@@ -1,25 +1,26 @@
 return {
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
-  },
-  -- catppuccin
+  -- add catppuccin
   {
     "catppuccin/nvim",
     lazy = true,
+    name = "catppuccin",
     opts = {
-      transparent = true,
       integrations = {
+        aerial = true,
         alpha = true,
         cmp = true,
+        dashboard = true,
         flash = true,
+        fzf = true,
+        grug_far = true,
         gitsigns = true,
+        headlines = true,
         illuminate = true,
         indent_blankline = { enabled = true },
+        leap = true,
         lsp_trouble = true,
         mason = true,
+        markdown = true,
         mini = true,
         native_lsp = {
           enabled = true,
@@ -32,35 +33,24 @@ return {
         },
         navic = { enabled = true, custom_bg = "lualine" },
         neotest = true,
+        neotree = true,
         noice = true,
         notify = true,
-        neotree = true,
         semantic_tokens = true,
+        snacks = true,
         telescope = true,
         treesitter = true,
+        treesitter_context = true,
         which_key = true,
       },
     },
   },
-  -- tokyonight
+
+  -- Configure LazyVim to load catppuccin
   {
-    "folke/tokyonight.nvim",
-    lazy = true,
+    "LazyVim/LazyVim",
     opts = {
-      style = "night",
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
-      on_highlights = function(hl, colors)
-        hl.CursorLineNr = {
-          fg = colors.white,
-        }
-        hl.CursorLine = {
-          bg = "none",
-        }
-      end,
+      colorscheme = "catppuccin",
     },
   },
 }

@@ -5,8 +5,4 @@
 -- turn off relative line numbers
 vim.opt.relativenumber = false
 
--- indent-blankline options
-vim.opt.list = true
-vim.opt.listchars:append("eol:↴")
-
 vim.opt.cmdheight = 1
