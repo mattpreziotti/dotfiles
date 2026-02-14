@@ -5,15 +5,16 @@ palette = "catppuccin_mocha"
 
 # Use custom format
 format = '''
-[┌─](bold blue) $directory
-[└─](bold blue) '''
+[┌─](bold green) $directory
+[└─](bold green) '''
 
 # move the rest of the prompt to the right
 right_format = """$all"""
 
 [directory]
-style = 'bold blue'
+style = 'bold green'
 truncate_to_repo = false
+truncation_length = 0
 
 [character]
 disabled = true
