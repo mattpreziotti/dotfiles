@@ -1,23 +1,15 @@
+# Settings
 add_newline = true
 command_timeout = 1000
 
+# Theme
 palette = "catppuccin_mocha"
 
-# Use custom format
-format = '''
-[┌─](bold green) $directory
-[└─](bold green) '''
+# A minimal left prompt
+format = """$directory$character"""
 
-# move the rest of the prompt to the right
+# Move the rest of the prompt to the right
 right_format = """$all"""
-
-[directory]
-style = 'bold green'
-truncate_to_repo = false
-truncation_length = 0
-
-[character]
-disabled = true
 
 [git_branch]
 disabled = true
@@ -29,7 +21,10 @@ disabled = true
 disabled = true
 
 [aws]
-disabled = true
+format = '[$symbol(profile: "$profile" )(\(region: $region\) )]($style)'
+disabled = false
+style = 'bold blue'
+symbol = " "
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
