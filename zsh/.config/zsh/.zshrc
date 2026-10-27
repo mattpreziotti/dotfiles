@@ -1,4 +1,3 @@
-PATH="$HOME/.go/bin:$PATH"
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   # If you're using macOS, you'll want this enabled
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -25,22 +24,31 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 zinit light birdhackor/zsh-eza-ls-plugin
 
-# Add in snippets
-# zinit snippet OMZP::git
-# zinit snippet OMZP::sudo
-# zinit snippet OMZP::archlinux
-# zinit snippet OMZP::aws
-# zinit snippet OMZP::kubectl
-# zinit snippet OMZP::kubectx
-# zinit snippet OMZP::command-not-found
-
 # Load completions
 autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Functions
+# lazygit cd script 
+gg() {
+    export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
+
+    lazygit "$@"
+
+    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
+            cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
+            rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+    fi
+}
+
+# cd up n directories
+up() {
+    # Default to 1 if no argument is provided
+    declare -i levels=${1:-1}
+    # Use '..' repeatedly to go up the specified number of levels
+    cd $(printf "%0.0s../" $(seq 1 $levels));
+}
 
 # Keybindings
 bindkey -e
@@ -74,7 +82,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias v='nvim'
 alias c='clear'
-alias gg='lazygit'
 
 # Shell integrations
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
@@ -82,3 +89,9 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 eval "$(mise activate)"
+
+# Add to path
+PATH="$HOME/.go/bin:$PATH"
+PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+PATH="$HOME/repos/work/R1S/footprint-developer-scripts/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
